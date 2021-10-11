@@ -1,0 +1,94 @@
+
+@mixin imagen ($alto , $ancho)
+{
+    max-width: 100%;
+    height: $alto;
+    width: $ancho;
+} 
+@mixin pGeneral($alineado, $tamano, $estilo, $color)
+{
+    font-style: $estilo;
+    font-weight: 300;
+    color: $color;
+    font-size: $tamano;
+    text-align: $alineado;
+} 
+
+@media only screen and (max-width: 600px) 
+{
+    .header
+      {height: 1000px;
+       width:500px;
+      .ul {  
+         display: flex;
+         flex-direction: column;
+         justify-content: left;
+         align-items:flex-start;
+         list-style-type: none;
+         .a {
+            font-size: 1.8vw;
+            text-align: left;
+           }
+     }
+    }
+  
+    .main {
+        height: auto;
+        #combos{
+            height:900px;
+            width: auto;
+            display:flex;
+            flex-direction:column;
+            flex-wrap: nowrap;
+            justify-content:space-around;
+            align-items:center;
+            padding:1em;
+            background-color:#979b98;
+        }
+    }  
+    
+    .p { 
+        @include pGeneral(center,1.7vw,italic,rgb(33, 34, 41) );  
+        margin-top: 0px;
+        margin-bottom: 5%;   
+    }
+    
+    .pDescrip{
+        @include pGeneral(justify,1.3vw,font-family 'Marcador permanente',rgb(33, 34, 41) );  
+        margin-top: 10px;
+        margin-bottom: 5%;   
+    }
+    
+    .pNuestrasDescrip{
+        @include pGeneral(justify,1.2vw,font-family 'Marcador permanente',rgb(33, 34, 41) );  
+         
+    }
+    
+   .espacio{
+    display: flex;
+    flex-direction:column-reverse;
+    align-items: center;
+    justify-content: space-around;
+    height: 600px;
+  }
+   .espacioIzquierda{
+    width: 380px;
+    height: 150px;
+   }
+  .espacioDerecha{
+    width: 300px;
+    height: 300px;
+  }
+.carrusel{
+    @include imagen(300px,88%); 
+    margin-left: 6.4%;
+    
+    }
+  
+   .footer{
+       height:100px;
+       width: auto;
+   }
+
+}
+
